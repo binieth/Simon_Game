@@ -11,4 +11,12 @@ function nextSequence(){
     var randomeChosenColor = randomNumber[buttonColors];
     // adding the random color generated into gamePattern
     gamePattern.push(randomeChosenColor);
+
+    // jQery to link button, sound and randomly selected color. 
+    $("#"+randomeChosenColor).fadeIn(100).fadeOut(100).fadeIn(100);
+
+    var audio = new Audio("sounds/" + randomeChosenColor+".mp3");
+    audio.play();
 }
+
+
